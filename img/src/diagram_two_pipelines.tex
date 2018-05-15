@@ -1,0 +1,116 @@
+\documentclass{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+%\usepackage{amsthm}
+%\usepackage[all]{xy}
+%\usepackage{enumerate}
+%\usepackage[hidelinks]{hyperref}
+
+%\addtolength{\oddsidemargin}{-1cm}
+%\addtolength{\evensidemargin}{-1cm}
+%\addtolength{\textwidth}{2cm}
+%\addtolength{\topmargin}{-2cm}
+%\addtolength{\textheight}{2cm}
+
+
+\date{\today}
+\begin{document}
+%\author{Florent Martin}
+
+\title{}
+%\maketitle
+%\tableofcontents
+
+\begin{tikzpicture}
+
+\tikzstyle{every node}=[font=\Large]
+
+
+\pgfmathsetmacro\x{10}
+\pgfmathsetmacro\y{0}
+
+\node (raw) at (\x, \y) {Raw data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (cleaner) at (\x, \y) {Cleaner};
+
+\draw[->,>=latex,dashed] (raw) -- (cleaner);
+
+\pgfmathsetmacro\y{\y-1}
+\node (cleanded) at (\x, \y) {Cleaned data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (vectorizer) at (\x,\y) {VECTORIZER 1};
+
+\draw[->,>=latex,dashed] (cleaner) -- (vectorizer);
+
+\pgfmathsetmacro\y{\y-1}
+\node (vecotorized) at (\x, \y) {Vectorized data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (reducer) at (\x,\y) {Dimensionality reduction};
+
+\draw[->,>=latex,dashed] (vectorizer) -- (reducer);
+
+\pgfmathsetmacro\y{\y-1}
+\node (reduced_vecotorized) at (\x, \y) {Reduced vectorized data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (estimator) at (\x,\y) {Estimator};
+
+\draw[->,>=latex,dashed] (reducer) -- (estimator);
+
+\pgfmathsetmacro\y{\y-1}
+\node (predictions) at (\x,\y) {Predictions};
+
+\draw[->, >=latex, dashed] (estimator) -- (predictions); 
+
+% SECOND PIPELINE
+\pgfmathsetmacro\x{20}
+%\pgfmathsetmacro\x{30}
+\pgfmathsetmacro\y{0}
+
+\node (raw2) at (\x, \y) {Raw data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (cleaner2) at (\x, \y) {Cleaner};
+
+\draw[->,>=latex,dashed] (raw2) -- (cleaner2);
+
+\pgfmathsetmacro\y{\y-1}
+\node (cleanded2) at (\x, \y) {Cleaned data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (vectorizer2) at (\x,\y) {VECTORIZER 2};
+
+\draw[->,>=latex,dashed] (cleaner2) -- (vectorizer2);
+
+\pgfmathsetmacro\y{\y-1}
+\node (vecotorized2) at (\x, \y) {Vectorized data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (reducer2) at (\x,\y) {Dimensionality reduction};
+
+\draw[->,>=latex,dashed] (vectorizer2) -- (reducer2);
+
+\pgfmathsetmacro\y{\y-1}
+\node (reduced_vecotorized2) at (\x, \y) {Reduced vectorized data};
+
+\pgfmathsetmacro\y{\y-1}
+\node[draw] (estimator2) at (\x,\y) {Estimator};
+
+\draw[->,>=latex,dashed] (reducer2) -- (estimator2);
+
+\pgfmathsetmacro\y{\y-1}
+\node (predictions2) at (\x,\y) {Predictions};
+
+\draw[->, >=latex, dashed] (estimator2) -- (predictions2); 
+
+\end{tikzpicture}
+
+%\bibliographystyle{plain}
+%\bibliography{../../Articles/bibli}
+
+\end{document}

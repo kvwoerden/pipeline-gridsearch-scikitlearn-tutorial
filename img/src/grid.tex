@@ -1,0 +1,104 @@
+\documentclass{standalone}
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath,amssymb,mathtools,mathrsfs}
+\usepackage[T1]{fontenc}
+\usepackage{tikz}
+%\usepackage{amsthm}
+%\usepackage[all]{xy}
+%\usepackage{enumerate}
+%\usepackage[hidelinks]{hyperref}
+
+%\addtolength{\oddsidemargin}{-1cm}
+%\addtolength{\evensidemargin}{-1cm}
+%\addtolength{\textwidth}{2cm}
+%\addtolength{\topmargin}{-2cm}
+%\addtolength{\textheight}{2cm}
+
+
+\date{\today}
+\begin{document}
+%\author{Florent Martin}
+
+\title{}
+%\maketitle
+%\tableofcontents
+
+\begin{tikzpicture}
+
+\tikzstyle{every node}=[font=\Large]
+
+
+%\pgfmathsetmacro\x{0}
+%\pgfmathsetmacro\y{0}
+%
+%
+%\node at (\x,\y) {C=0.1};
+%\draw (\x+2,\y) node {$\bullet$} ;
+%\draw (\x+4,\y) node {$\bullet$} ;
+%
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x,\y) {C=1};
+%\draw (\x+2,\y) node {$\bullet$} ;
+%\draw (\x+4,\y) node {$\bullet$} ;
+%
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x,\y) {C=10};
+%\draw (\x+2,\y) node {$\bullet$} ;
+%\draw (\x+4,\y) node {$\bullet$} ;
+%
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x,\y) {C=100};
+%\draw (\x+2,\y) node {$\bullet$} ;
+%\draw (\x+4,\y) node {$\bullet$} ;
+%
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x+2,\y) {L1};
+%\node at (\x+4,\y) {L2};
+
+
+
+
+\pgfmathsetmacro\x{0}
+\pgfmathsetmacro\y{0}
+
+\node at (\x+2,\y) {C=0.1};
+\node at (\x+4,\y) {C=1};
+\node at (\x+6,\y) {C=10};
+\node at (\x+8,\y) {C=100};
+
+\pgfmathsetmacro\y{\y-2}
+\node at (\x,\y) {L1};
+\draw (\x+2,\y) node {$\bullet$} ;
+\draw (\x+4,\y) node {$\bullet$} ;
+\draw (\x+6,\y) node {$\bullet$} ;
+\draw (\x+8,\y) node {$\bullet$} ;
+
+\pgfmathsetmacro\y{\y-2}
+\node at (\x,\y) {L2};
+\draw (\x+2,\y) node {$\bullet$} ;
+\draw (\x+4,\y) node {$\bullet$} ;
+\draw (\x+6,\y) node {$\bullet$} ;
+\draw (\x+8,\y) node {$\bullet$} ;
+
+
+
+
+
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x,\y) {C=100};
+%\draw (\x+2,\y) node {$\bullet$} ;
+%\draw (\x+4,\y) node {$\bullet$} ;
+%
+%\pgfmathsetmacro\y{\y-2}
+%\node at (\x+2,\y) {L1};
+%\node at (\x+4,\y) {L2};
+
+
+
+
+\end{tikzpicture}
+
+%\bibliographystyle{plain}
+%\bibliography{../../Articles/bibli}
+
+\end{document}
