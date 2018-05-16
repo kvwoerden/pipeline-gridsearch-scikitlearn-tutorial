@@ -48,4 +48,6 @@ target/
 # Re-include .gitkeep files:
 !.gitkeep
 
-
+# OS generated files #
+######################
+.DS_Store
