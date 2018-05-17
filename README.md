@@ -17,7 +17,7 @@ The jupyter notebook that has to be to run is
 It should be run from the root directory of the git repository.
 
 #### Download and prepare the data
-To run the notebook, you need to to have the two files `data.csv` and `val.csv` in the directory `./data/talk/`.
+To run the notebook, you need to  have the two files `data.csv` and `val.csv` in the directory `./data/talk/`.
 There are two ways to do so:
 
 * **The first way.** If the [kaggle api](https://github.com/Kaggle/kaggle-api) is installed on your computer (and if you have generated a [token API](https://github.com/Kaggle/kaggle-api#api-credentials)), and if you can use make, then simply run `make` in the root directory.
